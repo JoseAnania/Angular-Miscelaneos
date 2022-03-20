@@ -1,0 +1,30 @@
+<!-- HTML CREADO (perteneciente al componente "clases") -->
+
+<h3>3) <u>NG CLASS</u></h3>
+<h5>A</h5>
+<div [ngClass]="alerta" class="alert" role="alert">
+    Cambiar la clase de esta alerta de Bootstrap
+</div>
+<button type="button" class="btn btn-info" (click)="alerta = 'alert-info'" style="margin: 10px;">Info</button>
+<button type="button" class="btn btn-success" (click)="alerta = 'alert-success'">Succes</button>
+<br><br>
+<h5>B</h5>
+<h3 [ngClass]="{'text-danger': propiedades.danger, 'text-info': !propiedades.danger}">
+    Esta linea es un condicional booleano 
+</h3>
+<button (click)="propiedades.danger = !propiedades.danger"
+    type="button" class="btn"
+    [ngClass]="{'btn-danger': propiedades.danger, 'btn-info': !propiedades.danger}">
+    Cambiar 
+</button>
+<br><br>
+<h5>C</h5>
+<button (click)="ejecutar()" 
+    class="btn btn-primary" type="button" [disabled]="loading">
+    <i [ngClass]="{'fa-save': !loading, 'fa-refresh fa-spin': loading}"
+    class="fa"></i>
+    <span *ngIf="!loading"> Proceso Asíncrono</span>
+    <span *ngIf="loading"> Espere 3 segundos</span> 
+</button>
+
+

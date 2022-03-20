@@ -1,0 +1,29 @@
+<!-- Página de Inicio -->
+
+<div class="container main-container">
+  <h1>Demos <small>angular</small></h1>
+  <hr>
+  <!-- Llamo al componente "ngStyle" -->
+  <app-ng-style></app-ng-style>
+  <hr>
+  <!-- Llamo al componente "css" (el párrafo aquí creado no se modifica con los estilos, en cambio el estilo del componente sí)-->
+  <app-css></app-css>
+  <p>
+    esta es una etiqueta con estilo general (style.css)  
+  </p>
+  <hr>
+  <!-- Llamo al componente "clases"-->
+  <app-clases></app-clases>
+  <hr>
+  <!-- Llamo a la directiva  "resaltado"-->
+  <h3>4) <u>Directivas Personalizadas</u></h3>
+  <p [appResaltado]="'orange'">
+    Esta es una directiva (pase el mouse por esta línea)
+  </p>
+  <hr>
+  <!-- Llamo al componente "ngSwitch" -->
+  <app-ng-switch></app-ng-switch>
+  <hr>
+</div>
+
+
